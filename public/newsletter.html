@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Nyumbani Children's Home Newsroom</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="/"><img src="logo.png" alt="Nyumbani COGRI Home Logo"></a>
+            </div>
+            <ul class="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="newsletter.html">Newsletter</a></li>
+
+    <li><a href="index.html#donate" class="btn-donate">Donate</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sub-hero">
+            <div class="container">
+                <h1>Nyumbani Newsroom</h1>
+                <p>Digital archive of our impact and stories.</p>
+            </div>
+        </section>
+
+        <section class="subscribe-strip">
+            <div class="container">
+                <div class="subscribe-flex">
+                    <h2 class="subscribe-title">Get the latest news in your inbox</h2>
+                    <form class="inline-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="container archive-section">
+            <div class="archive-header">
+                <h2>Publications</h2>
+                
+                <div class="timeline-wrapper">
+                    <button class="scroll-btn" onclick="scrollTimeline(-150)">&#10094;</button>
+                    <div class="timeline-scroll" id="timeline">
+                        <button class="filter" data-filter="2026">2026</button>
+                        <button class="filter" data-filter="2025">2025</button>
+                        <button class="filter active" data-filter="2024">2024</button>
+                        <button class="filter" data-filter="2023">2023</button>
+                        <button class="filter" data-filter="all">All</button>
+                    </div>
+                    <button class="scroll-btn" onclick="scrollTimeline(150)">&#10095;</button>
+                </div>
+            </div>
+
+            <div id="no-results" class="no-results-text" style="display: none;">
+                <p>No current newsletters available for this year. Please check back later!</p>
+            </div>
+
+            <div class="newsletter-grid" id="news-grid">
+                <article class="newsletter-card" data-year="2024">
+                    <div class="news-thumb">
+                        <img src="images/news-cover-1.jpg" alt="Newsletter Cover">
+                        <span class="news-date">August 2024</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Hope in the Village</h3>
+                        <p>Education milestones and sustainability updates from Kitui.</p>
+                        <a href="newsletter-aug-24.pdf" target="_blank" class="read-link">Read PDF →</a>
+                    </div>
+                </article>
+
+                <article class="newsletter-card" data-year="2023">
+                    <div class="news-thumb">
+                        <img src="images/news-cover-2.jpg" alt="Newsletter Cover">
+                        <span class="news-date">Dec 2023</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Annual Impact Report</h3>
+                        <p>A summary of our achievements across all COGRI programs in 2023.</p>
+                        <a href="report-2023.pdf" target="_blank" class="read-link">Read PDF →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container center">
+            <p>© 2024 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll the timeline left or right
+        function scrollTimeline(amount) {
+            document.getElementById('timeline').scrollBy({ left: amount, behavior: 'smooth' });
+        }
+
+        // Filter functionality
+        const filters = document.querySelectorAll('.filter');
+        const cards = document.querySelectorAll('.newsletter-card');
+        const noResults = document.getElementById('no-results');
+        const grid = document.getElementById('news-grid');
+
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Toggle active class on buttons
+                filters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
+
+                const selectedYear = filter.getAttribute('data-filter');
+                let foundItems = 0;
+
+                cards.forEach(card => {
+                    const cardYear = card.getAttribute('data-year');
+                    if (selectedYear === 'all' || cardYear === selectedYear) {
+                        card.style.display = 'block';
+                        foundItems++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Display "No Results" message if year is empty
+                if (foundItems === 0) {
+                    noResults.style.display = 'block';
+                    grid.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    grid.style.display = 'grid';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
