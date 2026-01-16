@@ -11,14 +11,45 @@
 }
 
 /* 2. Reset & Typography */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; } /* Makes clicking nav links smooth scroll */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
 
 body { 
     font-family: 'Poppins', sans-serif; 
     line-height: 1.6; 
     color: var(--text-dark); 
     background-color: var(--white);
+    
+    /* Global Justification Request */
+    text-align: justify;
+    text-justify: inter-word; /* Distributes space evenly between words */
+    -webkit-font-smoothing: antialiased; /* Makes fonts look smoother on high-res screens */
+}
+
+/* Image Reset - Essential for your cards and icons */
+img {
+    max-width: 100%;
+    display: block; /* Prevents tiny gaps at the bottom of images */
+    height: auto;
+}
+
+/* Link Reset - Prevents all links from being blue/underlined by default */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+/* Typography Consistency */
+p {
+    margin-bottom: 1.5rem; /* Adds consistent spacing between paragraphs */
 }
 
 .container { 
@@ -76,6 +107,24 @@ nav { display: flex; justify-content: space-between; align-items: center; }
     border: none;
     cursor: pointer;
     transition: var(--transition);
+    
+}
+
+/* Target the specific container holding the donate button */
+.village-hero, .village-cta, .donate-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Centers items horizontally */
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+}
+
+/* Force the button itself to behave */
+.btn-donate {
+    display: inline-block !important;
+    margin: 30px auto !important; /* Centers it and adds breathing room */
+    float: none !important;      /* Removes any accidental left-floats */
 }
 
 .btn-secondary {
@@ -293,34 +342,23 @@ section { padding: 80px 0; }
 
 .pillar-card .icon { font-size: 2.5rem; display: block; margin-bottom: 15px; }
 
-/* Fix for the CTA section spacing */
-.cta-section {
-    padding: 80px 20px;
-    background: var(--light-bg);
-    border-radius: 20px;
-    margin: 40px auto 80px auto; /* Adds space above and below the whole box */
-    text-align: center;
-    display: flex; /* Using Flexbox to stack items perfectly */
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* This creates an automatic equal gap between the H2, P, and Button */
-}
-
-.cta-section h2 {
-    margin-bottom: 10px; /* Space between title and description */
-}
-
-.cta-section p {
-    margin-bottom: 25px; /* Space between description and button */
-    max-width: 600px; /* Keeps the text from getting too wide/messy */
-}
-
-/* Ensure the button respects the spacing */
+/* 3. Fix Button Padding and Footer Overlap */
 .cta-section .btn-primary {
-    display: inline-block; /* VERY IMPORTANT: allows it to have margins and padding */
-    text-decoration: none;
+    display: inline-block !important; /* Forces the browser to respect padding */
+    padding: 15px 35px !important;    /* Gives the button its shape */
+    margin-top: 20px !important;      /* Space between the text and button */
+    margin-bottom: 20px !important;   /* Space between the button and the bottom of the blue box */
 }
 
+.cta-section {
+    margin-bottom: 100px !important;  /* Pushes the footer much further down */
+    padding-bottom: 40px !important;  /* Adds internal breathing room inside the box */
+}
+
+footer {
+    clear: both !important;           /* Ensures the footer stays below everything */
+    margin-top: 50px !important;
+}
 /* Mobile Fix for Detail Grid */
 @media (max-width: 768px) {
     .detail-grid { grid-template-columns: 1fr; }
@@ -445,7 +483,27 @@ section { padding: 80px 0; }
 }
 
 .map-section {
-    padding-bottom: 80px;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.map-placeholder {
+    width: 100%;       /* Ensures the placeholder takes full container width */
+    display: flex;     /* Uses flexbox to manage the inner iframe */
+    justify-content: center; 
+    margin: 0 auto;    /* Centers the block on the page */
+}
+
+/* Specific fix for the 'center' class to ignore global justification */
+.center {
+    text-align: center !important;
+    display: block;
+    width: 100%;
+}
+
+.map-placeholder iframe {
+    /* This makes sure the map stays centered and has a clean look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* Mobile Fix */
@@ -478,10 +536,10 @@ section { padding: 80px 0; }
 }
 
 /* Specific Backgrounds (Replace with your images) */
-.home-bg { background-image: url('../images/home-main.jpg'); }
-.leatoto-bg { background-image: url('../images/leatoto-main.jpg'); }
-.village-bg { background-image: url('../images/village-main.jpg'); }
-.lab-bg { background-image: url('../images/lab-main.jpg'); }
+.home-bg { background-image: url('../images/nyumbani.jpg'); }
+.leatoto-bg { background-image: url('../images/lea.jpg'); }
+.village-bg { background-image: url('../images/village.jpg'); }
+.lab-bg { background-image: url('../images/lab.jpg'); }
 
 .card-overlay {
     background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
@@ -540,9 +598,10 @@ section { padding: 80px 0; }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-    grid-auto-flow: dense; /* Fills in the gaps */
+    /* This creates a responsive grid where columns are at least 300px wide */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Fixed row height ensures all items have the same height */
+    grid-auto-rows: 300px; 
     gap: 20px;
 }
 
@@ -550,21 +609,21 @@ section { padding: 80px 0; }
     position: relative;
     overflow: hidden;
     border-radius: 12px;
+    /* Optional: adds a subtle shadow to each card */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
 }
 
-/* Custom sizes for visual interest */
-.gallery-item.wide { grid-column: span 2; }
-.gallery-item.tall { grid-row: span 2; }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* This is the key: it crops the photo to fill the 300x300 box perfectly */
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly smaller zoom for a cleaner look */
 }
 
 .image-caption {
@@ -572,10 +631,13 @@ section { padding: 80px 0; }
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    /* Nyumbani Blue gradient for branding consistency */
+    background: linear-gradient(transparent, rgba(0, 51, 102, 0.9)); 
     color: white;
     padding: 20px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center; /* Centering text looks better in uniform grids */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -583,7 +645,6 @@ section { padding: 80px 0; }
 .gallery-item:hover .image-caption {
     opacity: 1;
 }
-
 /* Video Responsive Container */
 .video-container {
     position: relative;
@@ -1046,3 +1107,15 @@ body {
     .needs-list { column-count: 1; }
     .impact-val { font-size: 2rem; }
 }
+
+.vision-box {
+    text-align: center; /* Overrides the global justify for this section */
+    max-width: 700px;   /* Prevents the text from stretching too wide */
+    margin: 0 auto;     /* Centers the entire box on the page */
+    padding: 20px;
+}
+
+.vision-box p {
+    text-align: center; /* Ensures the paragraph specifically centers */
+}
+
