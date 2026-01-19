@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Annual Reports – Nyumbani Children's Home – COGRI</title>
+    
+    <link rel='stylesheet' href='https://nyumbani.or.ke/wp-content/themes/astra/assets/css/minified/frontend.min.css?ver=3.9.1' media='all' />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <header class="main-header">
+        <nav class="container" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="index.html"><img src="images/Nyumbanilogo.png" alt="Nyumbani COGRI Home Logo"></a>
+            </div>
+            <ul class="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li class="dropdown">
+    <a href="resources.html" class="dropbtn">Resources <i class="fas fa-caret-down"></i></a>
+    <div class="dropdown-content">
+        <a href="newsletter.html">Newsletters</a>
+        <a href="annual-report.html">Annual Reports</a>
+        <a href="audit-report.html">Audit Reports</a>
+        <a href="blog.html">Blog</a>
+    </div>
+</li>
+    <li><a href="careers.html" class="active">Careers</a></li>
+
+    <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
+</ul>
+        </nav>
+    </header>
+    <style>
+        :root {
+            --primary-blue: #062269;
+            --accent-blue: #4175FC;
+            --light-gray: #F6F7F8;
+            --white: #FFFFFF;
+        }
+
+        body { font-family: 'Poppins', sans-serif; margin: 0; color: #494B51; }
+
+        /* Header / Hero */
+        .reports-hero {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center !important;
+        }
+
+        .reports-hero h1 { color: var(--white); font-size: 48px; margin-bottom: 15px; }
+
+        /* Grid Section */
+        .reports-section { padding: 60px 20px; background: var(--white); }
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        /* Report Card Styling */
+        .report-card {
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 12px;
+            padding: 30px 20px;
+            text-align: center !important;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-color: var(--accent-blue);
+        }
+
+        .report-card i {
+            font-size: 50px;
+            color: #e74c3c; /* PDF Red */
+            margin-bottom: 15px;
+        }
+
+        .report-card h3 { 
+            font-size: 20px; 
+            margin-bottom: 10px; 
+            color: var(--primary-blue); 
+        }
+
+        .report-card p { font-size: 14px; margin-bottom: 20px; text-align: center !important; }
+
+        /* Download Button */
+        .btn-download {
+            background-color: var(--accent-blue);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-download:hover { background-color: var(--primary-blue); }
+
+        /* Simple Centering Fix */
+        .center-text { text-align: center !important; }
+    </style>
+</head>
+<body>
+
+    <header class="reports-hero">
+        <div class="container">
+            <h1>Annual Reports</h1>
+            <p>Transparency and accountability are at the core of our mission. Explore our yearly progress and financial highlights.</p>
+        </div>
+    </header>
+
+    <section class="reports-section">
+        <div class="container">
+            <h2 class="center-text">Archive of Reports</h2>
+            
+            <div class="reports-grid">
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>2023 Annual Report</h3>
+                    <p>Financial highlights and impact metrics for the 2023 fiscal year.</p>
+                    <a href="reports/Annual-Report-2023.pdf" class="btn-download" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>2022 Annual Report</h3>
+                    <p>Reviewing our achievements and community growth during 2022.</p>
+                    <a href="reports/Annual-Report-2022.pdf" class="btn-download" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>2021 Annual Report</h3>
+                    <p>Resilience and recovery: Our journey through the 2021 challenges.</p>
+                    <a href="reports/Annual-Report-2021.pdf" class="btn-download" target="_blank">Download PDF</a>
+                </div>
+
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>2020 Annual Report</h3>
+                    <p>Detailed reports on our mission and financial performance in 2020.</p>
+                    <a href="reports/Annual-Report-2020.pdf" class="btn-download" target="_blank">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/COGRINyumbaniKenya">Facebook</a> | <a href="https://twitter.com/COGRINyumbanike">Twitter</a> | <a href="https://www.instagram.com/cogri_nyumbani_kenya/">Instagram</a>
+                    | <a href="https://www.youtube.com/@NyumbaniChildrensHome">Youtube</a> | <a href="https://www.linkedin.com/company/children-of-god-relief-institute/">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

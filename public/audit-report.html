@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audit Reports – Nyumbani Children's Home – COGRI</title>
+    
+    <link rel='stylesheet' href='css/style.css' media='all' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <header class="main-header">
+        <nav class="container" aria-label="Main Navigation">
+            <div class="logo">
+                <a href="index.html"><img src="images/Nyumbanilogo.png" alt="Nyumbani Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="dropbtn">Resources <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="newsletter.html">Newsletters</a>
+                        <a href="annual-report.html">Annual Reports</a>
+                        <a href="audit-report.html">Audit Reports</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        /* Specific Styles for Audit Page (Can also be moved to style.css) */
+        .audit-hero {
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center !important;
+        }
+
+        .audit-hero h1 { color: #ffffff !important; font-size: 48px; }
+
+        .audit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .audit-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center !important;
+            border: 1px solid #e1e1e1;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .audit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-color: var(--accent-blue);
+        }
+
+        .audit-card i {
+            font-size: 50px;
+            color: #27ae60; /* Professional Green for Finance */
+            margin-bottom: 20px;
+        }
+
+        .audit-card h3 {
+            color: var(--primary-blue);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .audit-card p {
+            font-size: 14px;
+            text-align: center !important;
+            margin-bottom: 25px;
+        }
+
+        .btn-view-audit {
+            background: var(--accent-blue);
+            color: #fff !important;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-view-audit:hover { background: var(--primary-blue); }
+    </style>
+</head>
+<body>
+
+    <header class="audit-hero">
+        <div class="container">
+            <h1>Financial Audit Reports</h1>
+            <p>We are committed to full financial transparency. Access our independently verified audit reports below.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="audit-grid">
+            
+            <div class="audit-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>2023 Audit Report</h3>
+                <p>Full financial disclosure and auditor notes for the 2023 fiscal period.</p>
+                <a href="reports/Audit-2023.pdf" class="btn-view-audit" target="_blank">View Audit</a>
+            </div>
+
+            <div class="audit-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>2022 Audit Report</h3>
+                <p>Verified financial statements for our programs and operational expenses in 2022.</p>
+                <a href="reports/Audit-2022.pdf" class="btn-view-audit" target="_blank">View Audit</a>
+            </div>
+
+            <div class="audit-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>2021 Audit Report</h3>
+                <p>Independent review of fiscal management and resource allocation for 2021.</p>
+                <a href="reports/Audit-2021.pdf" class="btn-view-audit" target="_blank">View Audit</a>
+            </div>
+
+            <div class="audit-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>2020 Audit Report</h3>
+                <p>Financial accountability documentation for the 2020 operating year.</p>
+                <a href="reports/Audit-2020.pdf" class="btn-view-audit" target="_blank">View Audit</a>
+            </div>
+
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/COGRINyumbaniKenya">Facebook</a> | <a href="https://twitter.com/COGRINyumbanike">Twitter</a> | <a href="https://www.instagram.com/cogri_nyumbani_kenya/">Instagram</a>
+                    | <a href="https://www.youtube.com/@NyumbaniChildrensHome">Youtube</a> | <a href="https://www.linkedin.com/company/children-of-god-relief-institute/">Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
