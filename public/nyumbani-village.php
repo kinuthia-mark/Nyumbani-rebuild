@@ -9,30 +9,8 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <nav class="container" aria-label="Main Navigation">
-            <div class="logo">
-                <a href="index.html"><img src="images/Nyumbanilogo.png" alt="Nyumbani Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li class="dropdown">
-                    <a href="resources.html" class="dropbtn">Resources <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="newsletter.html">Newsletters</a>
-                        <a href="annual-report.html">Annual Reports</a>
-                        <a href="audit-report.html">Audit Reports</a>
-                        <a href="blog.html">Blog</a>
-                    </div>
-                </li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.php';
+     ?>
 
     <main>
         <section class="sub-hero village-hero">
@@ -112,19 +90,15 @@
             <p>Help us plant a tree or sponsor a child’s education in the heart of Kitui.</p>
             <div class="hero-btns">
                 <div style="text-align: center; width: 100%; margin-top: 20px;">
-    <a href="donate.html" class="btn-donate">Donate to the Village</a>
-                <a href="contact.html" class="btn-donate">Volunteer at the Village</a>
+    <a href="donate.php" class="btn-donate">Donate to the Village</a>
+                <a href="contact.php" class="btn-donate">Volunteer at the Village</a>
             </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
-            <p>Nyumbani Village: Kitui County, Kenya</p>
-        </div>
-    </footer>
+    <?php include 'footer.php'; 
+    ?>
 
 </body>
 </html>

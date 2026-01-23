@@ -14,39 +14,16 @@
 
     <a href="#main-content" class="skip-link" style="position: absolute; left: -10000px;">Skip to main content</a>
 
-    <header class="main-header">
-        <nav class="container" aria-label="Main Navigation">
-            <div class="logo">
-                <a href="index.html"><img src="images/Nyumbanilogo.png" alt="Nyumbani Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li class="dropdown">
-                    <a href="resources.html" class="dropbtn">Resources <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="newsletter.html">Newsletters</a>
-                        <a href="annual-report.html">Annual Reports</a>
-                        <a href="audit-report.html">Audit Reports</a>
-                        <a href="blog.html">Blog</a>
-                    </div>
-                </li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <?php include 'header.php';
+     ?>
     <main id="main-content">
         <section class="hero" aria-labelledby="hero-title">
             <div class="container">
                 <h1 id="hero-title">Nyumbani Children’s Home – COGRI</h1>
                 <p>Providing holistic care to HIV/AIDS affected children and families in Kenya since 1992.</p>
                 <div class="hero-btns">
-                    <a href="programs.html" class="btn-primary">Our Programs</a>
-                    <a href="contact.html" class="btn-secondary">Get In Touch</a>
+                    <a href="programs.php" class="btn-primary">Our Programs</a>
+                    <a href="contact.php" class="btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </section>
@@ -71,7 +48,7 @@
                 <div class="program-content">
                     <h3>Nyumbani Children’s Home</h3>
                     <p>Our flagship residential facility provides a loving family environment for up to 100 children living with HIV/AIDS. We focus on holistic care, including nutrition, medicine, and emotional support.</p>
-                    <a href="childrens-home.html" class="btn-text">Explore the Home &rarr;</a>
+                    <a href="childrens-home.php" class="btn-text">Explore the Home &rarr;</a>
                 </div>
             </div>
 
@@ -82,7 +59,7 @@
                 <div class="program-content">
                     <h3>Nyumbani Village</h3>
                     <p>Located in Kitui, this sustainable community supports HIV orphans and the elderly. It features eco-friendly housing, schools, and a farm to ensure long-term sustainability.</p>
-                    <a href="nyumbani-village.html" class="btn-text">Discover the Village &rarr;</a>
+                    <a href="nyumbani-village.php" class="btn-text">Discover the Village &rarr;</a>
                 </div>
             </div>
 
@@ -93,7 +70,7 @@
                 <div class="program-content">
                     <h3>Lea Toto Program</h3>
                     <p>A community-based outreach program that provided medical and social care to over 3,000 HIV+ children in Nairobi’s informal settlements.</p>
-                    <a href="lea-toto.html" class="btn-text">Our Community Work &rarr;</a>
+                    <a href="lea-toto.php" class="btn-text">Our Community Work &rarr;</a>
                 </div>
             </div>
 
@@ -148,17 +125,7 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/COGRINyumbaniKenya">Facebook</a> | <a href="https://twitter.com/COGRINyumbanike">Twitter</a> | <a href="https://www.instagram.com/cogri_nyumbani_kenya/">Instagram</a>
-                    | <a href="https://www.youtube.com/@NyumbaniChildrensHome">Youtube</a> | <a href="https://www.linkedin.com/company/children-of-god-relief-institute/">Linkedin</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <?php include 'footer.php'; 
+    ?>
 </body>
 </html>

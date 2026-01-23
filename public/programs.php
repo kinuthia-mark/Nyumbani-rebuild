@@ -9,30 +9,8 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <nav class="container" aria-label="Main Navigation">
-            <div class="logo">
-                <a href="index.html"><img src="images/Nyumbanilogo.png" alt="Nyumbani Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li class="dropdown">
-                    <a href="resources.html" class="dropbtn">Resources <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="newsletter.html">Newsletters</a>
-                        <a href="annual-report.html">Annual Reports</a>
-                        <a href="audit-report.html">Audit Reports</a>
-                        <a href="blog.html">Blog</a>
-                    </div>
-                </li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.php';
+     ?>
 
     <main>
         <section class="sub-hero">
@@ -51,7 +29,7 @@
                         <span>Residential Care</span>
                         <h2>Nyumbani Children’s Home</h2>
                         <p>Our flagship home in Karen providing love and medical care to 100 HIV+ orphans in a family cottage setting.</p>
-                        <a href="childrens-home.html" class="btn-white">View Program Details</a>
+                        <a href="childrens-home.php" class="btn-white">View Program Details</a>
                     </div>
                 </div>
             </div>
@@ -62,7 +40,7 @@
                         <span>Community Outreach</span>
                         <h2>Lea Toto Program</h2>
                         <p>Supported over 3,000 children within their own communities across 8 centers in Nairobi’s informal settlements.</p>
-                        <a href="lea-toto.html" class="btn-white">Explore Outreach</a>
+                        <a href="lea-toto.php" class="btn-white">Explore Outreach</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +51,7 @@
                         <span>Sustainability</span>
                         <h2>Nyumbani Village</h2>
                         <p>A self-sustaining eco-village in Kitui housing 1,000 orphans and grandparents in a unique multi-generational model.</p>
-                        <a href="nyumbani-village.html" class="btn-white">See the Village</a>
+                        <a href="nyumbani-village.php" class="btn-white">See the Village</a>
                     </div>
                 </div>
             </div>
@@ -104,17 +82,8 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/COGRINyumbaniKenya">Facebook</a> | <a href="https://twitter.com/COGRINyumbanike">Twitter</a> | <a href="https://www.instagram.com/cogri_nyumbani_kenya/">Instagram</a>
-                    | <a href="https://www.youtube.com/@NyumbaniChildrensHome">Youtube</a> | <a href="https://www.linkedin.com/company/children-of-god-relief-institute/">Linkedin</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; 
+    ?>
 
 
 </body>

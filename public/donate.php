@@ -9,30 +9,8 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <nav class="container" aria-label="Main Navigation">
-            <div class="logo">
-                <a href="index.html"><img src="images/Nyumbanilogo.png" alt="Nyumbani Logo"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li class="dropdown">
-                    <a href="resources.html" class="dropbtn">Resources <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="newsletter.html">Newsletters</a>
-                        <a href="annual-report.html">Annual Reports</a>
-                        <a href="audit-report.html">Audit Reports</a>
-                        <a href="blog.html">Blog</a>
-                    </div>
-                </li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'header.php';
+     ?>
 
     <main>
         <section class="sub-hero donate-hero">
@@ -65,7 +43,7 @@
                 
                 <div class="giving-grid">
                     <div class="give-card mpesa-card">
-                        <img src="images/mpesa-logo.png" alt="M-Pesa" class="give-logo">
+                        <img src="images/mpesa.png" alt="M-Pesa" class="give-logo">
                         <h3>Mobile Money (Lipa na M-Pesa)</h3>
                         <div class="pay-details">
                             <p><strong>Pay Bill:</strong> 961800</p>
@@ -108,17 +86,8 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Children of God Relief Institute (COGRI). All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/COGRINyumbaniKenya">Facebook</a> | <a href="https://twitter.com/COGRINyumbanike">Twitter</a> | <a href="https://www.instagram.com/cogri_nyumbani_kenya/">Instagram</a>
-                    | <a href="https://www.youtube.com/@NyumbaniChildrensHome">Youtube</a> | <a href="https://www.linkedin.com/company/children-of-god-relief-institute/">Linkedin</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; 
+    ?>
 
 
 </body>
