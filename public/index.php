@@ -115,12 +115,7 @@
                     <p><strong>Email:</strong> info@nyumbani.org</p>
                     <p><strong>Phone:</strong> +254 (0) 20 212 3456</p>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="How can you help?" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
+                
             </div>
         </section>
     </main>

@@ -43,7 +43,7 @@
 
                 <div class="contact-form-container">
                     <h2>Send us a Message</h2>
-                    <form id="contact-form" class="main-form">
+                    <form id="contact-form" class="main-form" action="send_message.php" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>

@@ -104,6 +104,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <a href="manage_audit_reports.php" class="admin-nav-link <?php echo ($current_page == 'manage_audit_reports.php') ? 'active' : ''; ?>">
             <i class="fas fa-file-invoice-dollar"></i> Audit Reports
         </a>
+
+        <a href="manage_messages.php" class="admin-nav-link <?php echo ($current_page == 'manage_messages.php') ? 'active' : ''; ?>">
+    <i class="fas fa-envelope"></i> Messages
+</a>
     </div>
 
     <div class="admin-sidebar-footer">
